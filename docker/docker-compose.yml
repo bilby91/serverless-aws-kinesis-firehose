@@ -1,0 +1,12 @@
+version: '3'
+
+volumes:
+  npm_modules:
+
+services:
+  plugin:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ../:/var/www/app

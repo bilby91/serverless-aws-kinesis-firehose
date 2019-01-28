@@ -1,0 +1,24 @@
+#!/bin/bash
+
+export COMPOSE_FILE=docker/docker-compose.yml
+
+case "$1" in
+  bash)
+    docker-compose run --service-ports --rm plugin /bin/bash
+    ;;
+  build)
+    docker-compose build
+    ;;
+  up)
+    docker-compose up
+    ;;
+  down)
+    docker-compose down
+    ;;
+  test)
+    docker-compose run -e node_env=test --rm plugin npm run test
+    ;;
+  lint)
+    docker-compose run -e node_env=test --rm plugin npm run lint
+    ;;
+esac

@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "11"
+
+script:
+- npm run lint
+- npm run test
+
+deploy:
+  provider: npm
+  email: fmartin91@gmail.com
+  api_key:
+    secure: G9IoqNrhnZISCyWUi/o6GWYDsNB5cG/43liE14fj1z3cpJe/7Xw6CQ/LVDMXrw1Nq7osMB8GzXdDT/4DKYfGD3OVJEOylIjh2CV+kKzRXIrlMKbuD/Bhwuk/gzkQRtgs8K0Vt+zQ0lkxf6TfEs/Cc23MnRYfRsJA9eH6n3S01ZBm6y+PD94tP/Ghcrvt+egyTnfOI/SqtHIZ1NP/VnjUHgDxHsk0eNFvmnMi/rcDcbG5wQ5Fl1b6pmxoaz8jEFKjpTxnj/KAkFdNDkajdKPA2hZrXVRiYQburSBRL9rlZC6EJDNZNlS55WnYUUW9nIu5eWejxnUvnc9aGtuVOiC4xBAot9Oyov4MdwhPJnBweBTcZMCRUmqS8jWO7jQkEjz+qmRJz4+2eduPO6wTed68wLuU358KrhH3XxkdVdh/gFr4PFbKVXwAd2TSfV0u4Kgo0H+y4BglmmDtfHMCEa9fFYqzeAaUMLtrsNttsIgWDpBpLE2IEU6cPB1vCQC/ukyEkrE4lH0Cw/vPMFyj1NlzNweDc+TD11IMHyFyxFGglT4X+QbUiIhVKJkQxcEAvTUVjUOfX1kfmogly/8+HejL3asmtaU/Gc3wJICjVXu7dEP/+O6yXPtdouKz78jrt4Q9TkO1IjtCXGsqA33T0XAgz6TF1U4P9pbCcbUNG9bLc5E=
+  on:
+    tags: true
